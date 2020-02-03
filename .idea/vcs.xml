@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OkHttp_Intercepter_testing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Retrofit2_test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/fitstop_fixbug_joe" vcs="Git" />
+  </component>
+</project>
