@@ -13,16 +13,16 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Translate" />
+        android:text="Sign In" />
 
-    <EditText
-        android:id="@+id/original"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_margin="5dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:gravity="top"/>
+<!--    <EditText-->
+<!--        android:id="@+id/original"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_margin="5dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textMultiLine"-->
+<!--        android:gravity="top"/>-->
 
         <TextView
             android:id="@+id/result"
