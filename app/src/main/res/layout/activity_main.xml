@@ -15,21 +15,32 @@
         android:layout_height="wrap_content"
         android:text="Sign In" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/original"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="250dp"-->
-<!--        android:layout_margin="5dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textMultiLine"-->
-<!--        android:gravity="top"/>-->
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:singleLine="true" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:ems="4"
+        android:gravity="top"
+        android:hint="Password"
+        android:inputType="number"
+        android:singleLine="true" />
 
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:text="Hello World!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
