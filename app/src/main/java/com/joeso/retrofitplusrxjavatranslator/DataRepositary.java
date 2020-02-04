@@ -1,7 +1,5 @@
 package com.joeso.retrofitplusrxjavatranslator;
 
-import android.annotation.SuppressLint;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -12,7 +10,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class DataRepositary {
-    public WebApi mApi;
+    private WebApi mApi;
 
     public DataRepositary(){
         Retrofit mRetrofit = new Retrofit.Builder()
@@ -24,10 +22,22 @@ public class DataRepositary {
     }
 
     public LiveData<User> logIn(String phone, String code){
-        MutableLiveData<User> result = new MutableLiveData<>();
+        final MutableLiveData<User> result = new MutableLiveData<>();
         mApi.signIn(phone, code)
-                .compose(Schedulers.io())
-                .subscribe(user -> result.setValue(user),throwable -> result.setValue(null));
+                .subscribeOn(Schedulers.io())               // 在IO线程进行网络请求
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<User>() {
+                    @Override
+                    public void accept(User user) throws Exception {
+                        result.setValue(user);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        result.setValue(null);
+                    }
+                });
+
         return result;
 
     }

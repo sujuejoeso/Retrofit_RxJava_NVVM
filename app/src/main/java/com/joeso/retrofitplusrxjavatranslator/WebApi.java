@@ -1,6 +1,5 @@
 package com.joeso.retrofitplusrxjavatranslator;
 
-import java.io.Serializable;
 import io.reactivex.Observable;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
